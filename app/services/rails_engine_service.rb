@@ -3,7 +3,7 @@ class RailsEngineService
     get_url("/api/v1/merchants")
   end
 
-  def self.merchant_items(merchant_id)
+  def self.merchant_items_list(merchant_id)
     get_url("/api/v1/merchants/#{merchant_id}/items")
   end
 

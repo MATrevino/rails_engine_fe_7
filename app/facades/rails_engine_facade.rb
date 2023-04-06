@@ -8,8 +8,8 @@ class RailsEngineFacade
   end
 
   def merchant_items(merchant_id)
-    json = RailsEngineService.merchant_items(merchant_id)
-    @items = json.map do |item_data|
+    json = RailsEngineService.merchant_items_list(merchant_id)
+    @merchant_items = json[:data].map do |item_data|
       Item.new(item_data)
     end
   end

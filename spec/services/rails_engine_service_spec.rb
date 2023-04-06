@@ -19,7 +19,7 @@ RSpec.describe RailsEngineService do
     it 'returns all items for a merchant', :vcr do
       VCR.use_cassette('rails_engine/merchant_items') do
         merchant_id = 1
-        items = RailsEngineService.merchant_items(merchant_id)
+        items = RailsEngineService.merchant_items_list(merchant_id)
 
         expect(items).to be_an(Hash)
         expect(items[:data].first.keys).to eq([:id, :type, :attributes])

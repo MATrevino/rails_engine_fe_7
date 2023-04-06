@@ -4,7 +4,10 @@ class MerchantsController < ApplicationController
   end
 
   def show
-    # @merchant = RailsEngineFacade.new.merchant(params[:id])
-    # @items = RailsEngineFacade.new.merchant_items(params[:id])
+    @merchants = RailsEngineFacade.merchants
+    @merchant = @merchants.find do |merchant|
+      merchant.id == params[:id]
+    end
+    @items = RailsEngineFacade.new.merchant_items(params[:id])
   end
 end
