@@ -1,9 +1,9 @@
 class RailsEngineFacade
 
-  def merchants
+  def self.merchants
     json = RailsEngineService.all_merchants
-    @merchants = json.map do |merchant_data|
-      Merchant.new(merchant_data)
+    @merchants = json[:data].map do |merchant_data|
+        Merchant.new(merchant_data)
     end
   end
 

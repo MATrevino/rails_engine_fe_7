@@ -16,14 +16,15 @@ RSpec.describe RailsEngineService do
   end
 
   describe '.merchant_items' do
-    it 'returns all items for a merchant' do
-      VCR.use_cassette('rails_engine/all_merchants') do
+    it 'returns all items for a merchant', :vcr do
+      VCR.use_cassette('rails_engine/merchant_items') do
         merchant_id = 1
         items = RailsEngineService.merchant_items(merchant_id)
 
-        expect(items).to be_an(Array)
-        expect(items.first).to have_key(:name)
-        expect(items.first).to have_key(:id)
+        expect(items).to be_an(Hash)
+        expect(items[:data].first.keys).to eq([:id, :type, :attributes])
+        expect(items[:data].first[:attributes].keys).to eq([:name, :description, :unit_price, :merchant_id])
+        expect(items[:data].first[:attributes][:merchant_id]).to eq(merchant_id)
       end
     end
   end
