@@ -39,12 +39,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - be0d68d7-58cb-4c3b-9e48-b458ceb7d0f8
+      - eb76b159-6c2b-4304-9412-0db41f6922fd
       X-Runtime:
-      - '0.157736'
+      - '0.008955'
       Server-Timing:
-      - sql.active_record;dur=64.05, start_processing.action_controller;dur=0.10,
-        instantiation.active_record;dur=20.83, process_action.action_controller;dur=40.32
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.87, instantiation.active_record;dur=0.26,
+        process_action.action_controller;dur=4.88
       Transfer-Encoding:
       - chunked
     body:
@@ -113,7 +113,7 @@ http_interactions:
         Prohaska and Rolfson"}},{"id":"100","type":"merchant","attributes":{"name":"Wisozk,
         Hoeger and Bosco"}},{"id":"99","type":"merchant","attributes":{"name":"Fahey-Stiedemann"}},{"id":"42","type":"merchant","attributes":{"name":"Glover
         Inc"}}]}'
-  recorded_at: Thu, 06 Apr 2023 15:59:26 GMT
+  recorded_at: Thu, 06 Apr 2023 17:48:22 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/merchants/1/items
@@ -153,12 +153,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 149f6016-ceac-456b-8020-00bf96083aba
+      - ff210334-0bfb-4aa7-89c8-664c0285fe0f
       X-Runtime:
-      - '0.034110'
+      - '0.019657'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=13.70,
-        instantiation.active_record;dur=6.11, process_action.action_controller;dur=29.03
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=10.97,
+        instantiation.active_record;dur=0.36, process_action.action_controller;dur=15.63
       Transfer-Encoding:
       - chunked
     body:
@@ -204,5 +204,5 @@ http_interactions:
         cupiditate reiciendis est commodi non. Atque eveniet sed. Illum excepturi
         praesentium reiciendis voluptatibus eveniet odit perspiciatis. Odio optio
         nisi rerum nihil ut.","unit_price":323.01,"merchant_id":1}}]}'
-  recorded_at: Thu, 06 Apr 2023 15:59:26 GMT
+  recorded_at: Thu, 06 Apr 2023 17:48:22 GMT
 recorded_with: VCR 6.1.0
